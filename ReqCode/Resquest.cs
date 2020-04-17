@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 using NetMQ;
 using NetMQ.Sockets;
 
-namespace RequestEndpointExercice
+namespace ReqCode
 {
     public class Resquest
     {
@@ -16,7 +14,7 @@ namespace RequestEndpointExercice
         public void SendRequest()
         {
 
-            using (var requestSocket = new RequestSocket("tcp://127.0.0.1"))
+            using (var requestSocket = new RequestSocket("tcp://127.0.0.1:55555"))
             {
 
                 requestSocket.SendFrame("Desks and Security cmd");

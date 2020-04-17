@@ -5,7 +5,13 @@ using System.Text;
 namespace RequestEndpointExercice
 {
    public class CreateOrderMsg
-    {
-        public string msg = "cmdMsg";
+   {
+        Guid id;
+        string msg = "cmdMsg";
+
+        public string GetMsg()
+        {
+            return msg;
+        }
     }
 }
